@@ -1,2 +1,6 @@
 # StarCapeTheGame
-A simple platformer game by me
+
+This is a Simple Platformer Game Developed Using Godot Game Engine
+
+
+(Roadmap and To Do coming soon)
