@@ -1,0 +1,226 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbtgjxyv0w6a8"]
+
+[ext_resource type="Script" uid="uid://5sbkrhfaj67x" path="res://Main/Script/pause_menu.gd" id="1_5tkjn"]
+[ext_resource type="PackedScene" uid="uid://cum1lxrmcsto7" path="res://Main/Scene/Player.tscn" id="1_fl4qi"]
+[ext_resource type="Texture2D" uid="uid://b7ko5jkdmsouk" path="res://Main/Resources/Texture/default_tiles.png" id="2_at3nc"]
+[ext_resource type="PackedScene" uid="uid://cw5plbt83jkls" path="res://Main/Scene/mobile_controls.tscn" id="2_ilbao"]
+[ext_resource type="Texture2D" uid="uid://c3qtrsdaisoim" path="res://Main/Resources/Texture/500451927_1288617062633900_2163423678234230888_n.jpg" id="3_qkal7"]
+[ext_resource type="Texture2D" uid="uid://c0qv8mmf5pjh4" path="res://Main/Resources/Icons/PauseIcon.png" id="4_3hm25"]
+[ext_resource type="FontFile" uid="uid://b58kcyqdneua3" path="res://Main/Resources/Fonts/Montserrat-Bold.ttf" id="5_m4ss1"]
+[ext_resource type="FontFile" uid="uid://1wrl1p8cc78o" path="res://Main/Resources/Fonts/Montserrat-Black.ttf" id="5_v58y7"]
+[ext_resource type="Texture2D" uid="uid://buxbj482116hs" path="res://Main/Resources/Texture/Parallax/background 1/orig_big.png" id="6_8dgds"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tkjn"]
+size = Vector2(19.2, 32)
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_5tkjn")
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+position = Vector2(0, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+position = Vector2(0, 10)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D"]
+position = Vector2(0, 10)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platform"]
+position = Vector2(447, -65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D2"]
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D2"]
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platform"]
+position = Vector2(217, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D3"]
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D3"]
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Platform"]
+position = Vector2(-682, -73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D6"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D6"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platform"]
+position = Vector2(-423, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D5"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D5"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platform"]
+position = Vector2(-172, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D4"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D4"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Platform"]
+position = Vector2(-918, -122)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D7"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D7"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Platform"]
+position = Vector2(-1151, -192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D8"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D8"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Platform"]
+position = Vector2(-1392, -276)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D9"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D9"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="memes" type="Sprite2D" parent="Platform"]
+position = Vector2(-1017.75, -561.313)
+scale = Vector2(0.106597, 0.108661)
+texture = ExtResource("3_qkal7")
+
+[node name="Player" parent="." instance=ExtResource("1_fl4qi")]
+
+[node name="MobileControls" parent="." instance=ExtResource("2_ilbao")]
+follow_viewport_enabled = false
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="PauseMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 803.0
+offset_right = -777.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_v58y7")
+theme_override_font_sizes/font_size = 128
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m4ss1")
+theme_override_font_sizes/font_size = 64
+text = "Resume"
+
+[node name="Main Menu" type="Button" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m4ss1")
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="PauseMenu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_m4ss1")
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+
+[node name="TouchScreenPauseButton2" type="CanvasLayer" parent="."]
+
+[node name="TouchScreenPauseButton" type="TouchScreenButton" parent="TouchScreenPauseButton2"]
+position = Vector2(13, 11)
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_3hm25")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-14, -197)
+scale = Vector2(1.75543, 1.70708)
+texture = ExtResource("6_8dgds")
+
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Resume" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Main Menu" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Quit" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="TouchScreenPauseButton2/TouchScreenPauseButton" to="." method="toggle_pause"]
