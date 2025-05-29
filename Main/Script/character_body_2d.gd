@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 200
-const JUMP_VELOCITY = -500
+const SPEED = 100
+const JUMP_VELOCITY = -350
 
 @onready var sprite = $AnimatedSprite2D
 
@@ -9,6 +9,20 @@ const JUMP_VELOCITY = -500
 func _physics_process(delta):
 	var direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.x = direction * SPEED
+
+	var platform_velocity = Vector2.ZERO
+
+# detect collision with the platform pls work
+	var collision = get_last_slide_collision()
+	if collision and collision.get_collider().is_in_group("moving_platform") and collision.get_normal().y < -0.7:
+		platform_velocity = collision.get_collider().get_velocity()
+
+# movement
+	move_and_slide()
+
+# apply platform movement
+	global_position += platform_velocity * delta
+
 
 	# reset player if fall to hell
 	if global_position.y > 500:

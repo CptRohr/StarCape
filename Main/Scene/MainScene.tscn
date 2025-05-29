@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cum1lxrmcsto7" path="res://Main/Scene/Player.tscn" id="1_fl4qi"]
 [ext_resource type="Texture2D" uid="uid://b7ko5jkdmsouk" path="res://Main/Resources/Texture/default_tiles.png" id="2_at3nc"]
 [ext_resource type="PackedScene" uid="uid://cw5plbt83jkls" path="res://Main/Scene/mobile_controls.tscn" id="2_ilbao"]
-[ext_resource type="Texture2D" uid="uid://c3qtrsdaisoim" path="res://Main/Resources/Texture/500451927_1288617062633900_2163423678234230888_n.jpg" id="3_qkal7"]
 [ext_resource type="Texture2D" uid="uid://c0qv8mmf5pjh4" path="res://Main/Resources/Icons/PauseIcon.png" id="4_3hm25"]
+[ext_resource type="PackedScene" uid="uid://csam6n0p4x2px" path="res://Main/Scene/moving_platform.tscn" id="4_w5mv2"]
 [ext_resource type="FontFile" uid="uid://b58kcyqdneua3" path="res://Main/Resources/Fonts/Montserrat-Bold.ttf" id="5_m4ss1"]
 [ext_resource type="FontFile" uid="uid://1wrl1p8cc78o" path="res://Main/Resources/Fonts/Montserrat-Black.ttf" id="5_v58y7"]
 [ext_resource type="Texture2D" uid="uid://buxbj482116hs" path="res://Main/Resources/Texture/Parallax/background 1/orig_big.png" id="6_8dgds"]
@@ -60,7 +60,7 @@ region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Platform"]
-position = Vector2(-682, -73)
+position = Vector2(-316, -130)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D6"]
 position = Vector2(385, -182)
@@ -105,7 +105,7 @@ region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="Platform"]
-position = Vector2(-918, -122)
+position = Vector2(-534, -243)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D7"]
 position = Vector2(385, -182)
@@ -120,7 +120,7 @@ region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Platform"]
-position = Vector2(-1151, -192)
+position = Vector2(-266, -307)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D8"]
 position = Vector2(385, -182)
@@ -135,7 +135,7 @@ region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Platform"]
-position = Vector2(-1392, -276)
+position = Vector2(-519, -381)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D9"]
 position = Vector2(385, -182)
@@ -149,10 +149,37 @@ texture = ExtResource("2_at3nc")
 region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
-[node name="memes" type="Sprite2D" parent="Platform"]
-position = Vector2(-1017.75, -561.313)
-scale = Vector2(0.106597, 0.108661)
-texture = ExtResource("3_qkal7")
+[node name="StaticBody2D10" type="StaticBody2D" parent="Platform"]
+position = Vector2(140, -490)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D10"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D10"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="Tutorial" type="Label" parent="."]
+offset_left = -104.0
+offset_top = -103.0
+offset_right = 4069.0
+offset_bottom = 1357.0
+scale = Vector2(0.05, 0.05)
+theme_override_fonts/font = ExtResource("5_v58y7")
+theme_override_font_sizes/font_size = 521
+text = "Your Objective
+GO UP!!!"
+horizontal_alignment = 1
+
+[node name="Moving Platform" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="Moving Platform" instance=ExtResource("4_w5mv2")]
+position = Vector2(200, -616)
 
 [node name="Player" parent="." instance=ExtResource("1_fl4qi")]
 
