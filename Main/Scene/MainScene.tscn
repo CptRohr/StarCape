@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://csam6n0p4x2px" path="res://Main/Scene/moving_platform.tscn" id="4_w5mv2"]
 [ext_resource type="FontFile" uid="uid://b58kcyqdneua3" path="res://Main/Resources/Fonts/Montserrat-Bold.ttf" id="5_m4ss1"]
 [ext_resource type="FontFile" uid="uid://1wrl1p8cc78o" path="res://Main/Resources/Fonts/Montserrat-Black.ttf" id="5_v58y7"]
-[ext_resource type="Texture2D" uid="uid://buxbj482116hs" path="res://Main/Resources/Texture/Parallax/background 1/orig_big.png" id="6_8dgds"]
+[ext_resource type="Texture2D" uid="uid://cniiil1fttwmh" path="res://Main/Resources/Texture/STARCAPE PARALLAX.png" id="9_qkal7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tkjn"]
 size = Vector2(19.2, 32)
@@ -164,11 +164,56 @@ texture = ExtResource("2_at3nc")
 region_enabled = true
 region_rect = Rect2(192.242, 0, 30, 30)
 
+[node name="StaticBody2D11" type="StaticBody2D" parent="Platform"]
+position = Vector2(804, -599)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D11"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D11"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Platform"]
+position = Vector2(1390, -695)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D12"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D12"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Platform"]
+position = Vector2(1226, -802)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D13"]
+position = Vector2(385, -182)
+scale = Vector2(10, 1)
+shape = SubResource("RectangleShape2D_5tkjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform/StaticBody2D13"]
+position = Vector2(385, -182)
+scale = Vector2(6.4, 1.06667)
+texture = ExtResource("2_at3nc")
+region_enabled = true
+region_rect = Rect2(192.242, 0, 30, 30)
+
 [node name="Tutorial" type="Label" parent="."]
-offset_left = -104.0
-offset_top = -103.0
-offset_right = 4069.0
-offset_bottom = 1357.0
+offset_left = -106.0
+offset_top = -104.0
+offset_right = 4067.0
+offset_bottom = 1356.0
 scale = Vector2(0.05, 0.05)
 theme_override_fonts/font = ExtResource("5_v58y7")
 theme_override_font_sizes/font_size = 521
@@ -180,6 +225,12 @@ horizontal_alignment = 1
 
 [node name="StaticBody2D" parent="Moving Platform" instance=ExtResource("4_w5mv2")]
 position = Vector2(200, -616)
+
+[node name="StaticBody2D2" parent="Moving Platform" instance=ExtResource("4_w5mv2")]
+position = Vector2(851, -738)
+
+[node name="StaticBody2D3" parent="Moving Platform" instance=ExtResource("4_w5mv2")]
+position = Vector2(1528, -825)
 
 [node name="Player" parent="." instance=ExtResource("1_fl4qi")]
 
@@ -243,9 +294,9 @@ texture_normal = ExtResource("4_3hm25")
 motion_scale = Vector2(0.5, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-14, -197)
-scale = Vector2(1.75543, 1.70708)
-texture = ExtResource("6_8dgds")
+position = Vector2(631, -13036)
+scale = Vector2(3.648, 2.70274)
+texture = ExtResource("9_qkal7")
 
 [connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Resume" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/Panel/VBoxContainer/Main Menu" to="." method="_on_main_menu_button_pressed"]

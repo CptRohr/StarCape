@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="StarCape"
+config/description="A Simple Platforming Game by Daru"
+config/version="0.1"
 run/main_scene="uid://uvbyrcs7wov6"
 config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=60
